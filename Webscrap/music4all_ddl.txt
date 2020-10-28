@@ -1,0 +1,4 @@
+CREATE TABLE Music4all (
+    MovieName VARCHAR (100),
+    MovieLink VARCHAR (500) 
+);
