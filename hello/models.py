@@ -5,6 +5,8 @@ from django.db import models
 class Movies(models.Model):
     movie_name = models.CharField(max_length=200)
     year = models.DateTimeField('date released')
+    def __str__(self):
+        return self.movie_name, self.year
 
 
 class Songs(models.Model):
