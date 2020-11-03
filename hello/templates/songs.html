@@ -1,0 +1,16 @@
+<h1>Songs</h1>
+
+<table border="1" width="600">
+    <tr>
+        <th>Movie Name</th>
+        <th>Song</th>
+        <th>Singer</th>
+    </tr>
+    {% for item in songs %}
+    <tr> 
+        <td>{{ item.movie }}</td>
+        <td>{{ item.song }}</td>
+        <td>{{ item.singer }}</td>
+    </tr>
+    {% endfor %}
+</table>

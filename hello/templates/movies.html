@@ -1,0 +1,29 @@
+<h1>Movie List</h1>
+<!-- <ul>
+    {% for x, y in movie_list %}
+        <li>{{ x }} {{ y }}</li>
+    {% endfor %}
+</ul> -->
+
+<!-- <ul>
+    {% if movies %}
+      {% for list in movies %}
+        <li>{{ list.movie_name }}</li>
+      {% endfor %}
+    {% else %}
+      <li>Sorry, no movies in this list.</li>
+    {% endif %}
+  </ul> -->
+
+  <table border="1" width="600">
+    <tr>
+        <th>Movie Name</th>
+        <th>Year Released</th>
+    </tr>
+    {% for item in movies %}
+    <tr> 
+        <td>{{ item.movie_name }}</td>
+        <td>{{ item.year }}</td>
+    </tr>
+    {% endfor %}
+</table>
