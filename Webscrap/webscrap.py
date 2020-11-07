@@ -9,8 +9,8 @@ import xlsxwriter
 homepage = requests.get("https://www.raaga.com/tamil/movies")
 soup = BeautifulSoup(homepage.content, 'html.parser')
 
-links = soup.find_all('div',class_="browseresult_index_album01")
-#links = soup.find_all('div',class_="browseresult_index_album01", limit=100)
+#links = soup.find_all('div',class_="browseresult_index_album01")
+links = soup.find_all('div',class_="browseresult_index_album01", limit=100)
 
 MovieName = []
 MovieLink = []

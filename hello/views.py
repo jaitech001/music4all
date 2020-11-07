@@ -5,6 +5,10 @@ from django.shortcuts import render
 from django.views import View
 from .models import Movies, Songs
 
+# Testing
+def hello_world(request):
+    return render(request, 'hello_world.html', {})
+
 # Create your views here.
 class Index(View):
     template = 'index.html'
@@ -14,14 +18,12 @@ class Index(View):
 
 def movie_list(request):
     movies = Movies.objects.all()
-    # context={
-    #     'movies': movies
-    # }
     return render(request,"movies.html",{'movies': movies})
 
 def song_list(request):
     songs = Songs.objects.all()
-    # context={
-    #     'songs':songs
-    # }
     return render(request,"songs.html",{'songs': songs})
+
+def singer_list(request):
+    singers = Singers.objects.all()
+    return render(request,"singers.html",{'singers': singers})

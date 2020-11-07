@@ -1,3 +1,8 @@
+{% extends "base.html" %}
+{% block title %}Music4All - Movies{% endblock title %}
+
+{% block page_content %}
+<h1>Movie List</h1>
 <h1>Movie List</h1>
 <!-- <ul>
     {% for x, y in movie_list %}
@@ -15,15 +20,16 @@
     {% endif %}
   </ul> -->
 
-  <table border="1" width="600">
-    <tr>
-        <th>Movie Name</th>
-        <th>Year Released</th>
-    </tr>
-    {% for item in movies %}
-    <tr> 
-        <td>{{ item.movie_name }}</td>
-        <td>{{ item.year }}</td>
-    </tr>
-    {% endfor %}
+<table border="1" width="600">
+  <tr>
+    <th>Movie Name</th>
+    <th>Year Released</th>
+  </tr>
+  {% for item in movies %}
+  <tr>
+    <td>{{ item.movie_name }}</td>
+    <td>{{ item.year }}</td>
+  </tr>
+  {% endfor %}
 </table>
+{% endblock %}

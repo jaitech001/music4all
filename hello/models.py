@@ -17,3 +17,9 @@ class Songs(models.Model):
     def __str__(self):
         return self.song
     objects = models.Manager()
+
+class Singer(models.Model):
+    singer = models.CharField(max_length=200)
+    def __str__(self):
+        return self.singer
+    objects = models.Manager()
